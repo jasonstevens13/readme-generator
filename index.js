@@ -56,7 +56,7 @@ function promptUser() {
             type: "input",
             name: "contributing",
             message: "Contributing - Please indicate whether you welcome contributions to your project; and if so, please provide instructions on how to do contribute."
-        }
+        },
         {
             type: "input",
             name: "tests",
@@ -75,3 +75,4 @@ function init() {
 }
 
 init();
+
