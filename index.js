@@ -71,7 +71,7 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-
+    promptUser();
 }
 
 init();
