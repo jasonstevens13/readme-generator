@@ -76,3 +76,17 @@ function init() {
 
 init();
 
+
+// promptUser()
+//   .then(function(answers) {
+//     const html = generateHTML(answers);
+
+//     return writeFileAsync("index.html", html);
+//   })
+//   .then(function() {
+//     console.log("Successfully wrote to generateMarkdown.js");
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   });
+
