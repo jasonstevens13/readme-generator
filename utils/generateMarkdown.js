@@ -2,6 +2,17 @@ function generateMarkdown(data) {
   return `
 # ${data.title} (Repo - ${data.gitHubRepoName})
 
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#licesnse)
+* [Badges](#badges)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
 ## Description
 ${data.description}
 
@@ -13,6 +24,9 @@ ${data.usage}
 
 ## License 
 ${data.license}
+
+## Badges
+
 
 ## Contributing
 ${data.contributing}
