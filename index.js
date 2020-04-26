@@ -1,14 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-// const markdown = require("./utils/generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-// const questions = [
-
-// ];
 
 function promptUser() {
     return inquirer.prompt([
@@ -110,42 +105,22 @@ function generateMarkdown(data) {
 };
 
 
-// function writeToFile("generateMarkdown.js", data) {
+function init() {
+    promptUser()
+        .then(function (answers) {
+            const mdown = generateMarkdown(answers);
 
-// }
+            return writeFileAsync("README.md", mdown);
+        })
+        .then(function () {
+            console.log("Successfully wrote to README.md");
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
 
+};
 
-promptUser()
-    .then(function (answers) {
-        const mdown = generateMarkdown(answers);
-
-        return writeFileAsync("README.md", mdown);
-    })
-    .then(function () {
-        console.log("Successfully wrote to README.md");
-    })
-    .catch(function (err) {
-        console.log(err);
-    });
-
-
-
-// function init() {
-//     promptUser()
-//     // .then(function (data) {
-//     //     const markdownText = generateMarkdown(data);
-
-//     //     return writeFileAsync('README.md', markdownText);
-//     // })
-//     // .then(function () {
-//     //     consolge.log("Successfully wrote ReadMe File!");
-//     // })
-//     // .catch(function (err) {
-//     //     console.log(err);
-//     // });
-
-// };
-
-// init();
+init();
 
 
