@@ -23,10 +23,7 @@ ${data.installation}
 ${data.usage}
 
 ## License 
-${data.license}
-
-## Badges
-
+![${data.license} License](https://img.shields.io/badge/License-${data.license}-green)
 
 ## Contributing
 ${data.contributing}
@@ -35,6 +32,7 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
+![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 https://avatars.githubusercontent.com/${data.gitHubUN}
 
