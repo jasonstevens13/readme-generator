@@ -1,10 +1,12 @@
+// Defining dependencies.
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+// Defining async writefile, pomisifying the fs.writefile method with util npm.
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
+// Prompt user with the following command line questions using inquirer npm.
 function promptUser() {
     return inquirer.prompt([
         {
@@ -61,6 +63,7 @@ function promptUser() {
     ]);
 }
 
+// Generate the readme doc contents with the following function (contents are within template literals).
 function generateMarkdown(data) {
     return `
   # ${data.title} (Repo - ${data.gitHubRepoName})
@@ -104,7 +107,7 @@ function generateMarkdown(data) {
   `;
 };
 
-
+// The following init function outlines the basic order of events to run the app.
 function init() {
     promptUser()
         .then(function (answers) {
@@ -121,6 +124,7 @@ function init() {
 
 };
 
+// Init func called here.
 init();
 
 
