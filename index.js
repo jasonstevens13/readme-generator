@@ -3,9 +3,6 @@ const fs = require("fs");
 const util = require("util");
 const markdown = require("./utils/generateMarkdown.js");
 
-const MIT = '![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)';
-const GPL = '[![GPL license](https://img.shields.io/badge/License-GPL-blue.svg)](http://perso.crans.org/besson/LICENSE.html)';
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 
