@@ -39,6 +39,6 @@ https://avatars.githubusercontent.com/${data.gitHubUN}
 ### Email - ${data.gitHubEmail}
 
 `;
-}
+};
 
 module.exports = generateMarkdown;
