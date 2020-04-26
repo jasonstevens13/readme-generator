@@ -95,9 +95,9 @@ function generateMarkdown(data) {
   ${data.tests}
   
   ## Questions
-  ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+  ![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
   
-  https://avatars.githubusercontent.com/${data.gitHubUN}
+  ![Profile Pic](https://avatars.githubusercontent.com/${data.gitHubUN})
   
   ### Email - ${data.gitHubEmail}
   
