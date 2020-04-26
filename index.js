@@ -113,7 +113,7 @@ function init() {
             return writeFileAsync("README.md", mdown);
         })
         .then(function () {
-            console.log("Successfully wrote to README.md");
+            console.log("Successfully wrote the README.md doc!");
         })
         .catch(function (err) {
             console.log(err);
