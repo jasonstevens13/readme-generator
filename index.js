@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const markdown = require("./utils/generateMarkdown.js");
 
 
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -48,9 +49,10 @@ function promptUser() {
             message: "Usage - Provide instructions and/or examples for use."
         },
         {
-            type: "input",
+            type: "list",
             name: "license",
-            message: "License - Please select the type of license you would like associated with your GitHub project: "
+            message: "License - Please select the type of license you would like associated with your GitHub project: ",
+            choices: ["license1", "license2"]
         },
         {
             type: "input",
@@ -66,9 +68,9 @@ function promptUser() {
 }
 
 
-function writeToFile(fileName, data) {
+// function writeToFile("generateMarkdown.js", data) {
 
-}
+// }
 
 function init() {
     promptUser();
